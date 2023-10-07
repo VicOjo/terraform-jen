@@ -39,7 +39,7 @@ resource "aws_rds_cluster" "aurorards" {
 resource "aws_rds_cluster_instance" "cluster_instances" {
     identifier         = "muaurorainstance"
     cluster_identifier = aws_rds_cluster.aurorards.id
-    instance_class     = "db.t3.small"
+    instance_class     = "db.t3.medium"
     engine             = aws_rds_cluster.aurorards.engine
     engine_version =      aws_rds_cluster.aurorards.engine_version
   }
