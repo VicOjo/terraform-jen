@@ -27,7 +27,7 @@ resource "aws_security_group" "allow_aurora" {
 
 resource "aws_rds_cluster" "aurorards" {
     cluster_identifier      = "myauroracluster"
-    engine                  = "aurora-postgres"
+    engine                  = "postgres"
     database_name           = "MyDB"
     master_username         = "Admin"
     master_password         = "Admin123"
