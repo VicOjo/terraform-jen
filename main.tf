@@ -8,7 +8,7 @@ resource "aws_security_group" "allow_aurora" {
     name        = "Aurora_lab_sg"
     description = "Security group for RDS Aurora"   
   ingress {
-      description      = "MYSQL/Aurora"
+      description      = "PostgresSQL/Aurora"
       from_port        = 3306
       to_port          = 3306
       protocol         = "tcp"
@@ -27,7 +27,7 @@ resource "aws_security_group" "allow_aurora" {
 
 resource "aws_rds_cluster" "aurorards" {
     cluster_identifier      = "myauroracluster"
-    engine                  = "aurora-mysql"
+    engine                  = "aurora-postgres"
     database_name           = "MyDB"
     master_username         = "Admin"
     master_password         = "Admin123"
