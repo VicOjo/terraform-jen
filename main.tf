@@ -26,7 +26,7 @@ resource "aws_security_group" "allow_aurora" {
 ###Create RDS Database Cluster and Instance in main.tf file
 
 resource "aws_rds_cluster" "aurorards" {
-    cluster_identifier      = "myauroracluster"
+    cluster_identifier      = "myauroracluster2"
     engine                  = "postgres"
     database_name           = "MyDB"
     master_username         = "Admin"
