@@ -1,5 +1,5 @@
 provider "aws" {
-    region     = "${var.region}"
+    region     = "us-east-1"
 }
 
 ###Create a security group for RDS Aurora Instance in main.tf file
